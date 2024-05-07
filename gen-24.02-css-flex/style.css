@@ -292,6 +292,12 @@
     position: relative;
     overflow: hidden;
     max-width: 100%;
+    font-size: Eina01, sans-serif;
+    color: #000;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 14px;
+    text-decoration: none;
 }
 
 .button-hover-bg {
@@ -307,7 +313,7 @@
     right: auto;
 }
 
-.button-hover-bg:hover {
+.primary-button:hover {
     background-color: #69db71;
 }
 
@@ -329,7 +335,7 @@
     text-decoration: none;
 }
 
-.button-color.color-black {
+.primary-button.color-black {
     font-size: Eina01, sans-serif;
     font-size: 14px;
     line-height: 14px;
