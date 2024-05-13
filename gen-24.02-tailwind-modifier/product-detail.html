@@ -10,17 +10,23 @@
 
 <body>
     <header>
-        <div class="container-sm flex z-[5] mx-auto py-[15px] max-w-full bg-white relative">
-            <div class="grid-cols-auto w-full max-w-screen-xl mx-auto px-4 overflow-visible">
-                <div class="flex justify-between items-center gap-4 p-[15]">
+        <div class="md:container-sm flex z-[5] mx-auto py-[15px] max-w-full bg-white relative border-b-2 mb-5">
+            <div class="w-full max-w-screen-xl mx-auto px-4 overflow-visible">
+                <div class="flex justify-between items-center gap-4 p-[15] grid-cols-auto">
                     <a href="#"><img
                             src="https://assets-global.website-files.com/63e857eaeaf853471d5335ff/63e86ab4c21faa7bc0bd90dd_Logo.svg"
                             alt="Logo"></a>
-                    <nav class="flex static float-right">
+                    <button class="md:hidden flex justify-items-end" data-collapse-toggle="navbar-default" type="button"
+                        aria-controls="navbar-default" aria-expanded="false">
+                        <img class="size-[44px]" src="https://cdn-icons-png.flaticon.com/512/10333/10333214.png" alt="">
+                    </button>
+                    <nav class="hidden md:flex static float-right" id="navbar-default">
                         <ul class="flex justify-between mb-0 items-center pl-0 list-none">
                             <li class="leading-[normal] box-content max-w-20 mx-5">
                                 <button
-                                    class="tracking-wide px-5 py-10 font-serif text-md font-medium leading-5 inline-block rounded-[10%] hover:bg-slate-500 duration-200">Categories</button>
+                                    class="tracking-wide px-5 py-10 font-serif text-md font-medium leading-5 inline-block rounded-[10%] hover:bg-slate-500 duration-200">
+                                    Categories
+                                </button>
                             </li>
                             <li class="leading-[normal] box-content max-w-20 mx-5">
                                 <a class="tracking-wide px-5 py-10 font-serif text-md font-medium leading-5 inline-block rounded-[10%] hover:bg-slate-500 duration-200"
@@ -33,15 +39,18 @@
                                     class="tracking-wide px-5 py-10 font-serif text-md font-medium leading-5 inline-block rounded-[10%] hover:bg-slate-500 duration-200"
                                     href="">Delivery</a></li>
                         </ul>
-                        <div class="flex flex-col justify-center ml-[35px] position-relative pt-3">
+                        <div class="md:flex flex-col justify-center ml-[35px] position-relative pt-3">
                             <form
-                                class="relative z-1 w-full h-10 w-80 max-w-80 bg-white border-4 rounded-xl mb-0 position-relative mt-0 my-0 mb-3.5"
+                                class="flex relative z-1000 w-full h-10 w-80 max-w-80 bg-white rounded-xl mb-0 position-relative mt-0 my-0 mb-3.5"
                                 action="">
-                                <input class="z-1 w-full h-10 rounded mb-0 pl-5 pr-12 pb-3" type="text" name=""
-                                    placeholder="Search Products" id="search-input">
+                                <input
+                                    class="flex border-4 border-slate-100 z-0 w-full h-10 rounded-full mb-0 pl-5 pr-12 pb-3 items-center justify-center hover:ring hover:ring-[#ddd]"
+                                    type="text" name="" placeholder="Search Products" id="search-input">
                             </form>
+                            <!-- <img class="md:hidden flex size-[19px]"
+                                src="https://cdn-icons-png.flaticon.com/512/751/751463.png" alt=""> -->
                         </div>
-                        <div class="flex mx-2">
+                        <div class="hidden md:flex mx-2">
                             <a class="flex text-black justify-items-center py-7 px-10 text-lg font-medium duration-200 hover:bg-slate-500 hover:rounded-[10%] max-w-full inline-block mx-2 max-w-5"
                                 href="">Account</a>
                             <a class="flex text-black justify-items-center py-7 px-10 text-lg font-medium duration-200 hover:bg-slate-500 hover:rounded-[10%] max-w-full inline-block mx-2"
@@ -54,15 +63,15 @@
     </header>
     <section>
         <div
-            class="container-md flex justify-items-center mx-auto grid-cols-2 gap-8 max-w-[768px] max-h-[768px] border-[1px] rounded border-slate-300 p-7 size-fit">
-            <div class="flex justify-items-center m-auto size-full">
-                <aside class="overflow-hidden">
+            class="container-sm md:container-md flex justify-items-center mx-2 md:mx-auto grid grid-rows-min md:grid-cols-2 gap-8 min-w-screen md:max-w-[768px] max-h-fit border-[1px] rounded border-slate-300 p-7 size-fit md:mb-5">
+            <div class="md:flex md:justify-items-center m-auto md:size-full">
+                <div class="overflow-hidden">
                     <img class="hover:scale-125 duration-300"
                         src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/1b629b25-26ec-4d73-a330-da71843d3018/waffle-debut-shoes-hbBJtw.png"
                         alt="Nike Waffle">
-                </aside>
+                </div>
             </div>
-            <div class="grid-row-auto size-full m-4 justify-items-center">
+            <div class="grid grid-rows-auto size-full md:m-4 justify-items-center">
                 <h2 class="text-xl font-light font-serif text-slate-400 my-3">S H O E S</h2>
                 <h1 class="text-3xl font-black font-serif my-3">Nike - Waffle</h1>
                 <p class="text-l font-light font-serif text-slate-700 my-3">
@@ -74,15 +83,96 @@
                     <h2 class="text-3xl font-bold text-[#1a503e]">$ 99 </h2><span
                         class="text-xs font-bold -top-5 text-[#1a503e]">.00</span>
                 </div>
-                <div class="h-10">
+                <div class="h-10 mb-10">
                     <button
-                        class="rounded bg-[#1a503e] text-white m-4 p-6 w-64 h-full inline-flex items-center justify-center font- hover:bg-[#36a580]">
+                        class="rounded bg-[#1a503e] text-white m-4 p-6 w-64 h-full inline-flex items-center justify-center font- hover:bg-[#36a580] active:bg-[#36a580] md:duration-200">
                         Add to cart
                         </butto>
                 </div>
             </div>
         </div>
     </section>
+    <footer>
+        <div class="grid grid-rows-auto flex justify-items-center px-5 md:px-20 overflow-hidden -pt-2 md:max-h-[300px]">
+            <div class="max-w-full max-h-fit border-t-2 border-color-black pt-5 pb-6 md:px-10 my-5">
+                <div class="grid grid-rows-4 md:grid-cols-4 justify-between mx-5 max-h-fit">
+                    <div class="grid grid-rows-auto px-2 -mx-3 max-w-full my-3 md:mx-5 justify-start items-start w-fit">
+                        <img class="mb-4"
+                            src="https://assets-global.website-files.com/63e857eaeaf853471d5335ff/63e86ab4c21faa7bc0bd90dd_Logo.svg"
+                            alt="">
+                        <p>Aperiam officia possimus, similique enim maxime architecto facere molestiae deserunt labore
+                            ipsam velit odio inventore pariatur excepturi commodi autem reiciendis repellendus animi.
+                        </p>
+                    </div>
+                    <div class="grid grid-rows-auto px-2 -mx-3 max-w-full my-3 md:mx-5 justify-start items-start w-fit">
+                        <h2 class="text-xl font-bold">About Us</h2>
+                        <ul class="flex justify-between mb-0 items-center pl-0 list-none grid grid-rows-auto ">
+                            <li
+                                class="text-black mb-0 text-sm font-medium leading-[200%] hover:translate-x-3 hover:text-red-400 duration-200">
+                                About
+                                Shopcart</li>
+                            <li
+                                class="text-black mb-0 text-sm font-medium leading-[200%] hover:translate-x-3 hover:text-red-400 duration-200">
+                                Careers</li>
+                            <li
+                                class="text-black mb-0 text-sm font-medium leading-[200%] hover:translate-x-3 hover:text-red-400 duration-200">
+                                News & Blog</li>
+                            <li
+                                class="text-black mb-0 text-sm font-medium leading-[200%] hover:translate-x-3 hover:text-red-400 duration-200">
+                                Help</li>
+                            <li
+                                class="text-black mb-0 text-sm font-medium leading-[200%] hover:translate-x-3 hover:text-red-400 duration-200">
+                                Press Center</li>
+                        </ul>
+                    </div>
+                    <div class="grid grid-rows-auto px-2 -mx-3 max-w-full my-3 md:mx-5 justify-start items-start w-fit">
+                        <h2 class="text-xl font-bold">Help</h2>
+                        <ul class="flex justify-between mb-0 items-center pl-0 list-none grid grid-rows-auto">
+                            <li
+                                class="text-black mb-0 text-sm font-medium leading-[200%] hover:translate-x-3 hover:text-red-400 duration-200">
+                                Returns
+                            </li>
+                            <li
+                                class="text-black mb-0 text-sm font-medium leading-[200%] hover:translate-x-3 hover:text-red-400 duration-200">
+                                Track Orders
+                            </li>
+                            <li
+                                class="text-black mb-0 text-sm font-medium leading-[200%] hover:translate-x-3 hover:text-red-400 duration-200">
+                                Contact Us
+                            </li>
+                            <li
+                                class="text-black mb-0 text-sm font-medium leading-[200%] hover:translate-x-3 hover:text-red-400 duration-200">
+                                Feedback
+                            </li>
+                            <li
+                                class="text-black mb-0 text-sm font-medium leading-[200%] hover:translate-x-3 hover:text-red-400 duration-200">
+                                Security & Fraud
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid grid-rows-auto px-2 -mx-3 max-w-full my-3 md:mx-5 justify-start items-start w-fit">
+                        <h2 class="text-xl font-bold">Give Your Feedback</h2>
+                        <div class="max-h-28 -mt-6">
+                            <form class="mb-4" action="">
+                                <input class="border-2 mb-2 w-full" type="email" name="name" id="name"
+                                    placeholder="Your Name">
+                                <input class="border-2 mb-2 w-full" type="text" name="email" id="email"
+                                    placeholder="email@example.com">
+                                <textarea class="border-2 mb-2 w-full" name="message" id="message" cols="30" rows="2"
+                                    placeholder="Type your message here..."></textarea>
+                                <input
+                                    class="border-2 rounded-full mb-2 bg-[#1a503e] hover:bg-[#36a580] active:bg-[#36a580] md:duration-200 text-white font-thin w-full"
+                                    type="submit" value="Submit">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full border-t-4 border-color-black pt-5 pb-6 md:px-10 mb-10">
+                <p class="text-center text-sm">© 2022. Shopcart. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
