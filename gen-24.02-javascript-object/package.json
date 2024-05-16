@@ -1,0 +1,13 @@
+{
+    "name": "javascript-object",
+    "version": "1.0.0",
+    "main": "object.js",
+    "scripts": {
+        "start": "node object.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "type": "module",
+    "author": "yusufva",
+    "license": "ISC",
+    "description": ""
+}
