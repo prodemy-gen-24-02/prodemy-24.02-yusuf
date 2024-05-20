@@ -1,7 +1,7 @@
 import { Fragment } from "react";
-import Navbar from "../components/Fragments/Navbar";
+// import Navbar from "../components/Fragments/Navbar";
+// import Footer from "../components/Fragments/Footer";
 import CardProduct from "../components/Fragments/CardProduct";
-import Footer from "../components/Fragments/Footer";
 
 const products = [
     {
@@ -89,7 +89,7 @@ const products = [
 const productPages = () => {
     return (
         <Fragment>
-            <Navbar />
+            {/* <Navbar /> */}
             <div className="flex flex-wrap mb-10 mx-auto py-4 w-full max-w-screen overflow-hidden lg:p-20">
                 <div className="min-w-full h-10 mb-10">
                     <h3 className="capitalize mb-10 font-black text-3xl mx-5">
@@ -115,7 +115,7 @@ const productPages = () => {
                     </div>
                 </div>
             </div>
-            <Footer />
+            {/* <Footer /> */}
         </Fragment>
     );
 };
