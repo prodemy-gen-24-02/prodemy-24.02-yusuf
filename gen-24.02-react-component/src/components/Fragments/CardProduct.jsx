@@ -4,7 +4,7 @@ import Button from "../Elements/Button";
 const CardProduct = (props) => {
     const { children } = props;
     return (
-        <div className="border-0 rounded-xl flex-none relative mr-6 max-w-[350px] inline-block mb-3">
+        <div className="border-0 rounded-xl flex-none relative mr-6 max-w-[310px] inline-block mb-3">
             {children}
         </div>
     );
@@ -12,9 +12,9 @@ const CardProduct = (props) => {
 
 const Header = ({ images }) => {
     return (
-        <div className="bg-[#F0F0F0] text-center flex justify-center items-center border-0 rounded-xl overflow-hidden w-[350px] h-[350px]">
+        <div className="bg-[#D9D9D9] text-center flex justify-center items-center border-0 rounded-xl overflow-hidden w-[310px] h-[310px]">
             <img
-                className="border-0 rounded-lg hover:scale-125 delay-300 transition-all max-w-[350px] max-h-[350px]"
+                className="border-0 rounded-lg hover:scale-125 delay-300 transition-all max-w-[310px] max-h-[310px]"
                 src={images}
                 alt="..."
             />
