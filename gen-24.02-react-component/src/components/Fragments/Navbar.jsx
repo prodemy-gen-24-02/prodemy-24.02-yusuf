@@ -1,4 +1,5 @@
 import { FaHamburger } from "react-icons/fa";
+import { IoIosArrowDown } from "react-icons/io";
 const Navbar = () => {
     return (
         <div className="z-[1000] bg-white mx-auto py-4 max-w-full relative">
@@ -12,8 +13,11 @@ const Navbar = () => {
                     </a>
                     <nav className="hidden md:flex md:float-right md:relative">
                         <ul className="flex justify-between mb-0 items-center pl-0 list-none">
-                            <li className="tracking-wide mx-1 py-1 px-3 text-base font-medium leading-5 inline-block border-0 rounded-[10%] hover:bg-slate-100 delay-200">
+                            <li className="tracking-wide mx-1 py-1 px-3 text-base font-medium leading-5 flex flex-nowrap border-0 rounded-[10%] hover:bg-slate-100 delay-200">
                                 Categories
+                                <span className="mt-1 ml-1">
+                                    <IoIosArrowDown />
+                                </span>
                             </li>
                             <li className="tracking-wide mx-1 py-1 px-3 text-base font-medium leading-5 inline-block border-0 rounded-[10%] hover:bg-slate-100 delay-200">
                                 Deals
