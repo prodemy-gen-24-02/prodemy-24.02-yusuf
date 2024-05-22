@@ -1,5 +1,6 @@
 import { IoMdStar, IoMdStarOutline } from "react-icons/io";
 import Button from "../Elements/Button";
+import NumberFormat from "../../utility/NumberFormat";
 
 const CardProduct = (props) => {
     const { children } = props;
@@ -22,15 +23,15 @@ const Header = ({ images }) => {
     );
 };
 
-const Body = ({ title, children, price, cent, star, rating }) => {
+const Body = ({ title, children, price, star, rating }) => {
     return (
         <div className="block leading-5 static">
             <div className="flex justify-between items-center">
                 <h3 className="mt-4 mb-3 text-lg font-bold">{title}</h3>
                 <div className="text-lg font-bold flex">
-                    <span className="text-sm relative -top-1">$</span>
-                    {price}
-                    <span className="text-sm relative -top-1">.{cent}</span>
+                    {/* <span className="text-sm relative -top-1">$</span> */}
+                    {NumberFormat.toUsd(price)}
+                    {/* <span className="text-sm relative -top-1">.{cent}</span> */}
                 </div>
             </div>
             <div className="mb-3 text-xs leading-4">{children}</div>
