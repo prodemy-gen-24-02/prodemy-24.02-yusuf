@@ -28,10 +28,10 @@ addProduct();
 
 const updateProduct = async (id) => {
     try {
-        const response = axios.put(`https://dummyjson.com/products/1`, {
+        const response = await axios.put(`https://dummyjson.com/products/1`, {
             title: "Gachapon edit",
         });
-        console.log("update " + response.data);
+        console.log(response.data);
     } catch (error) {
         console.log(error);
     }
