@@ -26,11 +26,28 @@ const addProduct = async () => {
 
 addProduct();
 
-const updateProduct = (id) => {
-    const response = axios.put(`https://dummyjson.com/products/${id}`, {
-        title: "Gachapon edit",
-    });
-    console.log(response.data);
+const updateProduct = async (id) => {
+    try {
+        const response = axios.put(`https://dummyjson.com/products/1`, {
+            title: "Gachapon edit",
+        });
+        console.log("update " + response.data);
+    } catch (error) {
+        console.log(error);
+    }
 };
 
 updateProduct(id);
+
+const search = async () => {
+    await axios
+        .get("https://dummyjson.com/products/1")
+        .then((res) => {
+            console.log(res.data);
+        })
+        .catch((err) => {
+            console.log(err.data);
+        });
+};
+
+search();
