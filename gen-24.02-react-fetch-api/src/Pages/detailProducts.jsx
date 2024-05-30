@@ -1,38 +1,19 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Footer from "../components/Fragments/Footer";
 import Navbar from "../components/Fragments/Navbar";
 import { useParams } from "react-router-dom";
 import NumberFormat from "../utility/NumberFormat";
 import Button from "../components/Elements/Button/index";
 import Loading from "../components/Elements/Loading/index";
-import { productsById } from "../services/axios.service";
+import { useGetProductsById } from "../hooks/useProducts";
 
 const DetailProduct = () => {
     const { id } = useParams();
-    // const fetch = await getProducts(
-    //     `${import.meta.env.VITE_API_URL}products/${id}`
-    // );
-    // console.log(fetch);
-    // const swr = useGetProductsById(id);
-    // console.log(swr);
-    // const product = fetch;
-    const [product, setProduct] = useState({});
-    const [isLoading, setIsLoading] = useState(false);
-    const [image, setImage] = useState("");
+    const swr = useGetProductsById(id);
+    const product = swr.data;
+    console.log(swr);
+    const [image, setImage] = useState(product?.img[0]?.src);
     const [isFading, setIsFading] = useState(false);
-
-    useEffect(() => {
-        setIsLoading(true);
-        productsById(
-            `${import.meta.env.VITE_API_URL}products/${id}`,
-            (data) => {
-                // console.log(data);
-                setProduct(data);
-                setImage(data.img[0].src);
-                setIsLoading(false);
-            }
-        );
-    }, [id]);
 
     const changeImage = (newImage) => {
         if (image === newImage) {
@@ -49,7 +30,7 @@ const DetailProduct = () => {
         <>
             <Navbar />
             <div className="container-sm md:container-md md:flex justify-center items-center mx-2 md:mx-auto grid grid-rows-min md:grid-cols-2 gap-8 min-w-screen md:max-w-[768px] max-h-fit border-[1px] rounded border-slate-300 p-10 size-fit md:mb-5 md:px-6 mt-10">
-                {isLoading ? (
+                {swr.isLoading ? (
                     <div className="flex justify-center items-center w-full">
                         <Loading />
                     </div>

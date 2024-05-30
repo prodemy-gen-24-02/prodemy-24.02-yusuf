@@ -20,7 +20,7 @@ export const useGetProducts = () => {
 export const useGetProductsById = (id) => {
     const { data, isLoading, error } = useSWR(
         `${import.meta.env.VITE_API_URL}products/${id}`,
-        () => getProducts()
+        getProducts
     );
 
     return {
