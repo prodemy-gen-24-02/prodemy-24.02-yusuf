@@ -5,10 +5,20 @@ import { useParams } from "react-router-dom";
 import data from "../data/data.json";
 import NumberFormat from "../utility/NumberFormat";
 import Button from "../components/Elements/Button/index";
+import { useGetProductsById } from "../hooks/useProducts";
+import useSWR from "swr";
+import { getProducts } from "../services/axios.service";
 
 const DetailProduct = () => {
     const { id } = useParams();
-    const productArray = data.filter((product) => product.id == id);
+    const fetch = useSWR(
+        import.meta.env.VITE_API_URL + "products/" + id,
+        getProducts()
+    );
+
+    console.log(fetch);
+    console.log(import.meta.env.VITE_API_URL + "products/" + id);
+    const productArray = data.products.filter((product) => product.id == id);
     const product = productArray.length > 0 ? productArray[0] : null;
     const [image, setImage] = useState(product.img[0].src);
     const [isFading, setIsFading] = useState(false);
