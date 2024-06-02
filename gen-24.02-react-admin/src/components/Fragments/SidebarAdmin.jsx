@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const SidebarAdmin = () => {
     return (
-        <div className="h-screen sticky top-0 w-fit max-w-1/4 pt-10 px-8 text-nowrap bg-[#36a580]">
+        <div className="h-screen sticky top-0 w-fit max-w-1/4 pt-10 px-8 text-nowrap bg-emerald-500">
             <div>
                 <Link to={"/admin"} className="mb-10">
                     <img
