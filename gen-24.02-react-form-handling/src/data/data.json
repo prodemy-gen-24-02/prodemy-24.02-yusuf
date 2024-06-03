@@ -1,0 +1,180 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "nama": "Gaming Headphone",
+      "desc": "Gaming Headphone, ultra bass",
+      "category": "Headphone",
+      "price": 200,
+      "star": 3,
+      "rating": 121,
+      "img": [
+        {
+          "id": 1,
+          "src": "https://assets-global.website-files.com/63e857eaeaf853471d5335ff/63e8c4e54b76914b262f2448_headphone-min.png"
+        },
+        {
+          "id": 2,
+          "src": "https://row.hyperx.com/cdn/shop/products/hyperx_cloud_alpha_wireless_1_main.jpg?v=1662449707"
+        },
+        {
+          "id": 3,
+          "src": "https://images.tokopedia.net/img/cache/700/VqbcmM/2021/12/26/eabaca2c-fcef-48de-b160-4147db176b38.jpg"
+        }
+      ]
+    },
+    {
+      "nama": "Nike Waffle",
+      "desc": "Retro gets modernised with these sleek sneakers inspired by the Nike Daybreak. Era-echoing suede and nylon are paired in complementary colours, and the updated wedge midsole gives you an extra lift. Style, comfort, that iconic Waffle outsole—this is a perfect new addition to your daily rotation.",
+      "category": "Shoes",
+      "price": 128.99,
+      "star": 4,
+      "rating": 328,
+      "img": [
+        {
+          "id": 1,
+          "src": "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/1b629b25-26ec-4d73-a330-da71843d3018/waffle-debut-shoes-hbBJtw.png"
+        },
+        {
+          "id": 2,
+          "src": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/f5ccef1e-75d8-4eec-a2ec-c73f15f7b04e/waffle-debut-shoes-hbBJtw.png"
+        },
+        {
+          "id": 3,
+          "src": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/e43bc784-567b-4ed3-9c22-498bf7ca7f0f/waffle-debut-shoes-hbBJtw.png"
+        },
+        {
+          "id": 4,
+          "src": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/227b2c9d-6952-4934-a0b0-1f5eda37aed3/waffle-debut-shoes-hbBJtw.png"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "id": 3,
+      "nama": "Gaming Shoes",
+      "desc": "Razer Gaming shoes with RGB, FPS++",
+      "category": "Shoes",
+      "price": 119.89,
+      "star": 3,
+      "rating": 284,
+      "img": [
+        {
+          "id": 1,
+          "src": "https://i.redd.it/j51v4llxyoh41.jpg"
+        },
+        {
+          "id": 2,
+          "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjHbkb9xFE-Ou-__r4Ma56J6B_3nGrmbjDh0Ffb2auNw&s"
+        },
+        {
+          "id": 3,
+          "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbyc0xEtizZ1p5THITOkLYy_7vb2wTa3ydVCevms1Mld01OqReCU5pwwwC-PO1RNg-b94&usqp=CAU"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "nama": "2TB NVME SSD",
+      "desc": "Samsung SSD 990 Pro 2TB M.2 MZ-V9P2T0BW",
+      "category": "SSD",
+      "price": 700,
+      "star": 5,
+      "rating": "3.2k",
+      "img": [
+        {
+          "id": 1,
+          "src": "https://media.dinomarket.com/docs/imgTD/2023-06/DM_DD7A3E11CA38FDDB700D3725A6E195B8_210623170636_ll.jpg.jpg"
+        },
+        {
+          "id": 2,
+          "src": "https://images.tokopedia.net/img/cache/100-square/VqbcmM/2023/1/5/2fe38b02-b248-4541-8989-329dd6d018ef.jpg.webp?ect=4g"
+        },
+        {
+          "id": 3,
+          "src": "https://www.cined.com/content/uploads/2022/09/SamsungSSD990PRO_featured-1.jpg"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "nama": "Condenser Microphone",
+      "desc": "Karaoke Condenser Microphone 35mm",
+      "category": "Peripheral",
+      "price": 9.99,
+      "star": 2,
+      "rating": 86,
+      "img": [
+        {
+          "id": 1,
+          "src": "https://upload.jaknot.com/2022/07/images/products/2d0a21/original/taffstudio-karaoke-condenser-microphone-35mm-with-stand-mk-f200tl.jpg"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "nama": "Wireless Gaming Mouse",
+      "desc": "Wireless Gaming Mouse with RGB",
+      "category": "Peripheral",
+      "price": 89.78,
+      "star": 4,
+      "rating": 48,
+      "img": [
+        {
+          "id": 1,
+          "src": "https://images-cdn.ubuy.co.id/633af67651ba8d64847d5064-versiontech-wireless-gaming-mouse.jpg"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "nama": "Carabiner",
+      "desc": "Strong Carabiner for Climbing Sport",
+      "category": "Sports",
+      "price": 1.49,
+      "star": 5,
+      "rating": "9.7k",
+      "img": [
+        {
+          "id": 1,
+          "src": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//catalog-image/102/MTA-120891917/br-m036969-10265_black-diamond-rocklock-screwgate-carabiner-black-alat-panjat-tebing_full02-e1acb410.jpg"
+        },
+        {
+          "id": 2,
+          "src": "https://m.media-amazon.com/images/I/61tE2hmpOtL._AC_UF1000,1000_QL80_.jpg"
+        },
+        {
+          "id": 3,
+          "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIfRIkHNkEoS8sQ5N4yX_RbETtAzrWKu0ExJ7-d38V9w&s"
+        },
+        {
+          "id": 4,
+          "src": "https://m.media-amazon.com/images/I/519vmxMUAtL._AC_UF894,1000_QL80_.jpg"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "nama": "Gaming Mouse",
+      "desc": "Mesh Gaming Mouse with RGB, FPS+++",
+      "category": "Peripheral",
+      "price": 13.45,
+      "star": 3,
+      "rating": 32,
+      "img": [
+        {
+          "id": 1,
+          "src": "https://i.ebayimg.com/images/g/4CMAAOSwbqFinet1/s-l1200.webp"
+        },
+        {
+          "id": 2,
+          "src": "https://m.media-amazon.com/images/I/519vmxMUAtL._AC_UF894,1000_QL80_.jpg"
+        },
+        {
+          "id": 3,
+          "src": "https://m.media-amazon.com/images/I/61TxmMiMObL._AC_UF1000,1000_QL80_.jpg"
+        }
+      ]
+    }
+  ]
+}
