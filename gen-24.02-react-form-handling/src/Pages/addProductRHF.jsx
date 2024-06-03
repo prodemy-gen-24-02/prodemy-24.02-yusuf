@@ -43,14 +43,14 @@ const AddProductRHF = () => {
     };
 
     const onClickSubmit = () => {
-        if (images[0].src === "") {
-            return Swal.fire({
-                title: "Error!",
-                text: "Product must be atleast have 1 Images",
-                icon: "error",
-                confirmButtonText: "OK",
-            });
-        }
+        // if (images[0].src === "") {
+        //     return Swal.fire({
+        //         title: "Error!",
+        //         text: "Product must be atleast have 1 Images",
+        //         icon: "error",
+        //         confirmButtonText: "OK",
+        //     });
+        // }
         const data = { ...product, img: images };
         console.log(data);
     };

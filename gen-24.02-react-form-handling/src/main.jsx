@@ -7,6 +7,7 @@ import DetailProduct from "./Pages/detailProducts.jsx";
 import ProductAdmin from "./Pages/productAdmin.jsx";
 import AddProduct from "./Pages/addProduct.jsx";
 import AddProductRHF from "./Pages/addProductRHF.jsx";
+import AdminDashboard from "./Pages/adminDashboard.jsx";
 
 const router = createBrowserRouter([
     {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
     {
         path: "/products/details/:id",
         element: <DetailProduct />,
+    },
+    {
+        path: "/admin",
+        element: <AdminDashboard />,
     },
     {
         path: "/admin/products",

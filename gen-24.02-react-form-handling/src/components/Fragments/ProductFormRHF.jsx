@@ -26,8 +26,9 @@ const ProductFormHF = (props) => {
         star: yup.number().required("Star field is Required"),
         rating: yup.number().required("Rating field is Required"),
         img: yup
-            .array(
-                yup.object({
+            .array()
+            .of(
+                yup.object().shape({
                     src: yup.string().required("Images field is Required"),
                 })
             )
