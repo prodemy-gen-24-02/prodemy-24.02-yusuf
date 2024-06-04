@@ -79,6 +79,19 @@ const EditProduct = () => {
 
     const onSubmit = async (e) => {
         e.preventDefault();
+        images.map((img, i) => {
+            // if (img.src === "") {
+            //     return Swal.fire({
+            //         title: "Error!",
+            //         text: "Product can't be empty",
+            //         icon: "error",
+            //         confirmButtonText: "OK",
+            //     });
+            // }
+            if (img.id === undefined) {
+                img.id = i + 1;
+            }
+        });
         const dataToSubmit = { ...product, img: images };
         try {
             const validation = await schema.validate(dataToSubmit);

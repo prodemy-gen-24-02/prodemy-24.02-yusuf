@@ -88,7 +88,7 @@ const ProductForm = (props) => {
                                 />
                                 <div className="flex justify-start items-center py-6 w-full">
                                     <Button
-                                        className={`text-white p-5 rounded-lg mx-2 `}
+                                        className={`text-white bg-emerald-600 hover:bg-emerald-700 active:bg-emerald-800 p-5 rounded-lg mx-2 `}
                                         onClick={onClickImages}
                                     >
                                         Add More Product Images

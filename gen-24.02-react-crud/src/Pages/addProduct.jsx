@@ -83,6 +83,9 @@ const AddProduct = () => {
 
     const onSubmit = async (e) => {
         e.preventDefault();
+        images.map((img, i) => {
+            img.id = i + 1;
+        });
         const data = { ...product, img: images };
         try {
             const validation = await schema.validate(data);
