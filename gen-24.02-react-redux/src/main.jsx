@@ -9,32 +9,34 @@ import AddProduct from "./Pages/addProduct.jsx";
 import AddProductRHF from "./Pages/addProductRHF.jsx";
 import AdminDashboard from "./Pages/adminDashboard.jsx";
 import EditProduct from "./Pages/editProduct.jsx";
-import { CheckoutProvider } from "./context/CheckoutContext.jsx";
+// import { CheckoutProvider } from "./context/CheckoutContext.jsx";
 import CheckoutProduct from "./Pages/checkoutProduct.jsx";
+import { Provider } from "react-redux";
+import store from "./redux/store.js";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: (
-            <CheckoutProvider>
-                <ProductPages />
-            </CheckoutProvider>
+            // <CheckoutProvider>
+            <ProductPages />
+            // </CheckoutProvider>
         ),
     },
     {
         path: "/products/details/:id",
         element: (
-            <CheckoutProvider>
-                <DetailProduct />
-            </CheckoutProvider>
+            // <CheckoutProvider>
+            <DetailProduct />
+            // </CheckoutProvider>
         ),
     },
     {
         path: "/products/checkout",
         element: (
-            <CheckoutProvider>
-                <CheckoutProduct />
-            </CheckoutProvider>
+            // <CheckoutProvider>
+            <CheckoutProduct />
+            // </CheckoutProvider>
         ),
     },
     {
@@ -61,6 +63,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode>
-        <RouterProvider router={router} />
+        <Provider store={store}>
+            <RouterProvider router={router} />
+        </Provider>
     </React.StrictMode>
 );

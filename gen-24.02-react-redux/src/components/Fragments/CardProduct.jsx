@@ -1,6 +1,7 @@
 import { IoMdStar, IoMdStarOutline } from "react-icons/io";
 import Button from "../Elements/Button";
 import NumberFormat from "../../utility/NumberFormat";
+import { Link } from "react-router-dom";
 
 const CardProduct = (props) => {
     const { children } = props;
@@ -11,15 +12,17 @@ const CardProduct = (props) => {
     );
 };
 
-const Header = ({ images }) => {
+const Header = ({ images, id }) => {
     return (
-        <div className="bg-[#D9D9D9] text-center flex justify-center items-center border-0 rounded-xl overflow-hidden w-[310px] h-[310px]">
-            <img
-                className="border-0 rounded-lg hover:scale-125 delay-300 transition-all max-w-[310px] max-h-[310px]"
-                src={images}
-                alt="..."
-            />
-        </div>
+        <Link to={`/products/details/${id}`}>
+            <div className="bg-[#D9D9D9] text-center flex justify-center items-center border-0 rounded-xl overflow-hidden w-[310px] h-[310px]">
+                <img
+                    className="border-0 rounded-lg hover:scale-125 delay-300 transition-all max-w-[310px] max-h-[310px]"
+                    src={images}
+                    alt="..."
+                />
+            </div>
+        </Link>
     );
 };
 
@@ -53,7 +56,7 @@ const Body = ({ title, children, price, star, rating, onClick }) => {
             </div>
             <div className="inline-block w-full my-5">
                 <Button
-                    className="bg-white border-[1px] border-black w-full duration-500 active:bg-[#69db71] delay-75 md:hover:bg-[#69db71] md:delay-300 rounded-full"
+                    className="bg-white border-[1px] border-black w-full duration-500 active:bg-[#306634] delay-200 md:hover:bg-[#69db71] md:delay-200 rounded-full"
                     onClick={onClick}
                 >
                     Add to Cart

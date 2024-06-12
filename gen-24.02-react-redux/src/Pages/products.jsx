@@ -1,17 +1,31 @@
 import CardProduct from "../components/Fragments/CardProduct";
 import Loading from "../components/Elements/Loading/index";
-import { Link, useNavigate } from "react-router-dom";
+// import { Link /* useNavigate */ } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../redux/actions/cartActions";
 import { useGetProducts } from "../hooks/useProducts";
 import BasicLayout from "../components/Layouts/BasicLayout";
+import Swal from "sweetalert2";
 
 const ProductPages = () => {
     const fetch = useGetProducts();
-    const navigate = useNavigate();
+    const dispatch = useDispatch();
+    // const navigate = useNavigate();
 
     const products = fetch.data;
 
     const onClickAddCart = (id) => {
-        navigate(`/products/details/${id}`);
+        const produk = products.filter((product) => product.id === id);
+        const payload = { ...produk[0] };
+        payload.image = payload.img[0].src;
+        console.log(payload);
+        delete payload.img;
+        dispatch(addToCart(payload));
+        Swal.fire({
+            icon: "success",
+            title: "Success",
+            text: "Product added to cart",
+        });
     };
 
     return (
@@ -32,24 +46,25 @@ const ProductPages = () => {
                             {products &&
                                 products.map((product) => (
                                     <CardProduct key={product.id}>
-                                        <Link
+                                        {/* <Link
                                             to={`/products/details/${product.id}`}
+                                        > */}
+                                        <CardProduct.Header
+                                            images={product.img[0].src}
+                                            id={product.id}
+                                        />
+                                        <CardProduct.Body
+                                            title={product.nama}
+                                            price={product.price}
+                                            star={product.star}
+                                            rating={product.rating}
+                                            onClick={() =>
+                                                onClickAddCart(product.id)
+                                            }
                                         >
-                                            <CardProduct.Header
-                                                images={product.img[0].src}
-                                            />
-                                            <CardProduct.Body
-                                                title={product.nama}
-                                                price={product.price}
-                                                star={product.star}
-                                                rating={product.rating}
-                                                onClick={() =>
-                                                    onClickAddCart(product.id)
-                                                }
-                                            >
-                                                {product.desc}
-                                            </CardProduct.Body>
-                                        </Link>
+                                            {product.desc}
+                                        </CardProduct.Body>
+                                        {/* </Link> */}
                                     </CardProduct>
                                 ))}
                         </div>

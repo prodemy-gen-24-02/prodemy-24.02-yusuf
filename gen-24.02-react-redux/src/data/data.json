@@ -231,6 +231,46 @@
       "price": 128.99,
       "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/e43bc784-567b-4ed3-9c22-498bf7ca7f0f/waffle-debut-shoes-hbBJtw.png",
       "id": 5
+    },
+    {
+      "name": "john doe",
+      "email": "johndoe@mail.com",
+      "address": "john doe address",
+      "shipping": "Regular Service",
+      "products": [
+        {
+          "price": 119.89,
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjHbkb9xFE-Ou-__r4Ma56J6B_3nGrmbjDh0Ffb2auNw&s"
+        },
+        {
+          "price": 700,
+          "image": "https://images.tokopedia.net/img/cache/100-square/VqbcmM/2023/1/5/2fe38b02-b248-4541-8989-329dd6d018ef.jpg.webp?ect=4g"
+        },
+        {
+          "price": 89.78,
+          "image": "https://images-cdn.ubuy.co.id/633af67651ba8d64847d5064-versiontech-wireless-gaming-mouse.jpg"
+        }
+      ],
+      "totalPrice": 909.67,
+      "id": 6
+    },
+    {
+      "name": "USER1",
+      "email": "buyermail@mail.com",
+      "address": "asdasd asdasd dsadsa",
+      "shipping": "Regular Service",
+      "products": [
+        {
+          "price": 128.99,
+          "image": "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/1b629b25-26ec-4d73-a330-da71843d3018/waffle-debut-shoes-hbBJtw.png"
+        },
+        {
+          "price": 119.89,
+          "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjHbkb9xFE-Ou-__r4Ma56J6B_3nGrmbjDh0Ffb2auNw&s"
+        }
+      ],
+      "totalPrice": 248.88,
+      "id": 7
     }
   ]
 }
