@@ -7,7 +7,7 @@ import { useGetProductsById } from "../hooks/useProducts";
 // import { CheckoutContext } from "../context/CheckoutContext";
 import BasicLayout from "../components/Layouts/BasicLayout";
 import { addToCart } from "../redux/slice/cartSlice";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Swal from "sweetalert2";
 import ButtonLoading from "../components/Elements/ButtonLoading/Index";
 
@@ -21,6 +21,7 @@ const DetailProduct = () => {
     const [buttonLoading, setButtonLoading] = useState(false);
     // const navigate = useNavigate();
     const dispatch = useDispatch();
+    const userId = useSelector((state) => state.user.user.id);
 
     const changeImage = (newImage) => {
         if (image === newImage) {
@@ -42,6 +43,11 @@ const DetailProduct = () => {
         const produk = { ...product };
         delete produk.img;
         produk.image = image;
+        produk.productId = produk.id;
+        produk.qty = 1;
+        produk.userId = userId;
+        delete produk.id;
+        delete produk.img;
         dispatch(addToCart(produk));
         Swal.fire({
             icon: "success",

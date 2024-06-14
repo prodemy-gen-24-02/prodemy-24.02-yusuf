@@ -21,7 +21,9 @@ const ProductPages = () => {
         const payload = { ...produk[0] };
         payload.image = payload.img[0].src;
         payload.qty = 1;
+        payload.productId = payload.id;
         payload.userId = userId;
+        delete payload.id;
         delete payload.img;
         // console.log(payload);
         dispatch(addToCart(payload));

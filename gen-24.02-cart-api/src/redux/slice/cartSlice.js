@@ -43,11 +43,20 @@ const cartSlice = createSlice({
                 (item) => item.id === action.payload.id
             );
             if (itemInCart) {
-                itemInCart.qty += 1;
-                axios.put(
-                    import.meta.env.VITE_API_URL + `cart/${itemInCart.id}`,
-                    itemInCart
-                );
+                if (itemInCart.image !== action.payload.image) {
+                    axios.post(
+                        axios.post(
+                            import.meta.env.VITE_API_URL + "cart",
+                            action.payload
+                        )
+                    );
+                } else {
+                    itemInCart.qty += 1;
+                    axios.put(
+                        import.meta.env.VITE_API_URL + `cart/${itemInCart.id}`,
+                        itemInCart
+                    );
+                }
             } else {
                 state.data.push(action.payload);
                 axios.post(
